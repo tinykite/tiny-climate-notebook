@@ -1,29 +1,29 @@
 <script lang="ts">
-    import * as d3 from "d3";
+  import * as d3 from "d3";
 	import { formatDate } from '$lib/utils'
 	import * as config from '$lib/config'
 
 	export let data
 
-    import { getTimelineData, getScatterData } from "./utils/dummyData";
+    // import { getTimelineData, getScatterData } from "./utils/dummyData";
     // import Timeline from "./Timeline.svelte";
     // import ScatterPlot from "./ScatterPlot.svelte";
     // import Histogram from "./Histogram.svelte";
-    import Timeline from "./components/Timeline.svelte";
-    import ScatterPlot from "./components/ScatterPlot.svelte";
-    import Histogram from "./components/Histogram.svelte";
+    // import Timeline from "./components/Timeline.svelte";
+    // import ScatterPlot from "./components/ScatterPlot.svelte";
+    // import Histogram from "./components/Histogram.svelte";
   
-    const parseDate = d3.timeParse("%m/%d/%Y");
-    const dateAccessor = d => parseDate(d.date);
-    const temperatureAccessor = d => d.temperature;
-    const humidityAccessor = d => d.humidity;
+    // const parseDate = d3.timeParse("%m/%d/%Y");
+    // const dateAccessor = d => parseDate(d.date);
+    // const temperatureAccessor = d => d.temperature;
+    // const humidityAccessor = d => d.humidity;
   
-    const getData = () => ({
-      timeline: getTimelineData(),
-      scatter: getScatterData()
-    });
+    // const getData = () => ({
+    //   timeline: getTimelineData(),
+    //   scatter: getScatterData()
+    // });
   
-    let updatedData = getData();
+    // let updatedData = getData();
 </script>
 
 <svelte:head>
@@ -46,27 +46,7 @@
   <main>
     <div class="App">
       <h1>Weather Dashboard</h1>
-      <div class="App__charts">
-        <Timeline
-          data={updatedData.timeline}
-          xAccessor={dateAccessor}
-          yAccessor={temperatureAccessor}
-          label="Temperature" />
-        <ScatterPlot
-                  data={utter}
-                  xAccessor={humidityAccessor}
-                  yAccessor={temperatureAccessor}
-                  xLabel="Humidity"
-                  yLabel="Temperature"
-              />
-              <Histogram
-                  data={data.scatter}
-                  xAccessor={humidityAccessor}
-                  label="Humidity"
-              />
-      </div>
-    </div>
-  
+      <div class="App__charts"></div>
   </main>
   
   <style>
