@@ -1,4 +1,4 @@
-export default [
+export const data = [
     { name: "Antonio", hours: 44, grade: 50 },
     { name: "Sai", hours: 60, grade: 99 },
     { name: "Yohan", hours: 23, grade: 50 },
