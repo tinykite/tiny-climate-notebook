@@ -51,7 +51,7 @@
           gridlines={false}
           labelPosition='even'
         />
-        <BarPudding/>
+        <Bar/>
       </Svg>
     </LayerCake>
   </div>
