@@ -3,8 +3,8 @@
     import { scaleBand } from 'd3-scale';
   
     import Bar from '$components/Bar.svelte';
-    import AxisX from '$components/AxisX.svelte';
-    import AxisY from '$components/AxisY.svelte';
+    import AxisX from '$components/AxisX.svg.svelte';
+    import AxisY from '$components/AxisY.svg.svelte';
   
     // In your local project, you will more likely be loading this as a csv and converting it to json using @rollup/plugin-dsv
     import { data } from '$data/bar-groups';
