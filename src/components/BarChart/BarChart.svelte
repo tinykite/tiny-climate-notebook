@@ -2,7 +2,7 @@
     import { LayerCake, Svg } from 'layercake';
     import { scaleBand } from 'd3-scale';
   
-    import Bar from '$components/Bar.svelte';
+    import Bar from './Bar.svelte';
     import AxisX from '$components/Axis/AxisX.svg.svelte';
     import AxisY from '$components/Axis/AxisY.svg.svelte';
   
@@ -51,7 +51,7 @@
           gridlines={false}
           labelPosition='even'
         />
-        <Bar/>
+        <BarPudding/>
       </Svg>
     </LayerCake>
   </div>

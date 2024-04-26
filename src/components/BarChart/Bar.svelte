@@ -1,26 +1,17 @@
-<!--
-	@component
-	Generates an SVG bar chart.
- -->
- <script>
-	import { getContext } from 'svelte';
+<script>
+	import { getContext } from "svelte";
 
-	const { data, xGet, yGet, xScale, yScale } = getContext('LayerCake');
+	const { data, xGet, yGet, xScale, yScale } = getContext("LayerCake");
 
-	/** @type {String} [fill='#00bbff'] – The shape's fill color. This is technically optional because it comes with a default value but you'll likely want to replace it with your own color. */
 	export let fill = '#00bbff';
 </script>
 
-<g class="bar-group">
+<g>
 	{#each $data as d, i}
-		<rect
-			class='group-rect'
-			data-id="{i}"
-			x="{$xScale.range()[0]}"
-			y="{$yGet(d)}"
-			height={$yScale.bandwidth()}
-			width="{$xGet(d)}"
-			{fill}
-		></rect>
+		{@const x = $xScale.range()[0]}
+		{@const y = $yGet(d)}
+		{@const width = $xGet(d)}
+		{@const height = $yScale.bandwidth()}
+		<rect data-id={i} {x} {y} {width} {height} {fill} />
 	{/each}
 </g>
