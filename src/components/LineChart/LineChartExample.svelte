@@ -3,8 +3,8 @@
   
     import Line from './Line.svelte';
     import Area from './Area.svelte';
-    import AxisX from '$components/AxisX.percent-range.html.svelte';
-    import AxisY from '$components/AxisY.percent-range.html.svelte';
+    import AxisX from '$components/Axis/AxisX.percent-range.html.svelte';
+    import AxisY from '$components/Axis/AxisY.percent-range.html.svelte';
   
     // In your local project, you will more likely be loading this as a csv and converting it to json using @rollup/plugin-dsv
     import data from '$data/line-points.js';
