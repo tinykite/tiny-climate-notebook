@@ -109,7 +109,7 @@
   
   <style>
     .tick {
-      font-size: 11px;
+      font-size: 16px;
     }
   
     line,

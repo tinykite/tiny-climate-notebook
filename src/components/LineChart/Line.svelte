@@ -5,7 +5,7 @@
 
 	const { data, xGet, yGet } = getContext("LayerCake");
 
-	export let stroke = "#ccc";
+	export let stroke = "#1C3B77";
 
 	export let curve = curveLinear;
 

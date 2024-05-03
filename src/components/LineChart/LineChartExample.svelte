@@ -1,16 +1,14 @@
 <script>
-    import { LayerCake, ScaledSvg, Html } from 'layercake';
+    import { Html, LayerCake, ScaledSvg } from 'layercake';
   
-    import Line from './Line.svelte';
-    import Area from './Area.svelte';
     import AxisX from '$components/Axis/AxisX.percent-range.html.svelte';
     import AxisY from '$components/Axis/AxisY.percent-range.html.svelte';
+    import Line from './Line.svelte';
   
-    // In your local project, you will more likely be loading this as a csv and converting it to json using @rollup/plugin-dsv
-    import data from '$data/line-points.js';
-  
-    const xKey = 'myX';
-    const yKey = 'myY';
+    const yKey = 'temp';
+    const xKey = 'year';
+
+    export let data
   
     data.forEach(d => {
       d[yKey] = +d[yKey];
@@ -41,14 +39,15 @@
       {data}
     >
       <Html>
-        <AxisX/>
+        <AxisX ticks={10} tickGutter={5} snapLabels />
         <AxisY
           ticks={4}
+          format={d=>`${d}° F`}
+          snapBaselineLabel
         />
       </Html>
       <ScaledSvg>
         <Line/>
-        <Area/>
       </ScaledSvg>
     </LayerCake>
   </div>
