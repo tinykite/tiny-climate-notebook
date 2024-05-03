@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils'
-
+	import LineChart from '$components/LineChart/LineChartExample.svelte';
 	export let data
 </script>
 
@@ -23,6 +23,10 @@
 		{#each data.meta.categories as category}
 			<span class="surface-4">&num;{category}</span>
 		{/each}
+	</div>
+
+	<div>
+		<LineChart data={data.chartData} />
 	</div>
 
   <!-- Post -->

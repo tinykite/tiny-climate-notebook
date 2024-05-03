@@ -7,8 +7,7 @@
     import AxisY from '$components/Axis/AxisY.svg.svelte';
   
     // In your local project, you will more likely be loading this as a csv and converting it to json using @rollup/plugin-dsv
-    import { data } from '$data/bar-groups';
-  
+    import {data} from '$data/bar-groups'
         
     const xKey = 'value';
     const yKey = 'year';

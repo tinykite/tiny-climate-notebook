@@ -9,9 +9,8 @@
   import Tooltip from '$components/Todo/Tooltip.html.svelte';
 
   // This example loads json data as json using @rollup/plugin-json
-  import usStates from '$data/states-albers-10m.json';
-  import stateData from '$data/us-states-data.json';
-
+  import usStates from '$data/states-albers-10m.json'
+  import stateData from '$data/us-states-data.json'
   const colorKey = 'myValue';
 
   /* --------------------------------------------

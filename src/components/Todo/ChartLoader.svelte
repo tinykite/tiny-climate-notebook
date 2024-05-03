@@ -7,7 +7,6 @@
     async function fetchData() {
         try {
          const res = await d3.csv(`/data/${dataSource}`)
-         console.log(d3.csv)
         }
         catch (err) {
             console.log(err)

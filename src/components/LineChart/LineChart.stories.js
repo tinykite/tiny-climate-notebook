@@ -1,5 +1,5 @@
 import LineChart from '$components/LineChart/LineChartExample.svelte'
-import weatherData from '$data/minnesotaAverageTemp.json';
+import weatherData from '$data/data-minnesotaAverageTemp.json'
 
 export default {
   component: LineChart,

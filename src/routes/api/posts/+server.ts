@@ -12,7 +12,14 @@ async function getPosts() {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
-			const post = { ...metadata, slug } satisfies Post
+			let chartData
+		
+			if (metadata?.chartDataType === 'json') {			
+				const parsedChartData = await import(`../../../data/data-${metadata.chartData}.json`);
+				chartData = parsedChartData.default
+			}
+
+			const post = { ...metadata, slug, chartData } satisfies Post
 			post.published && posts.push(post)
 		}
 	}
