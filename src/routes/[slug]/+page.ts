@@ -12,7 +12,7 @@ export async function load({ params }) {
 		return {
 			content: post.default,
 			meta: post.metadata,
-			chartData
+			chartData,
 		}
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`)

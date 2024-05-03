@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils'
-  import LineChart from '$components/LineChart/LineChartExample.svelte'
 	import * as config from '$lib/config'
+  import Chart from '$components/Chart/Chart.svelte';
 
 	export let data
 </script>
@@ -18,9 +18,7 @@
 				<a href={post.slug} class="title">{post.title}</a>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
-        {#if post.chartData} 
-        <LineChart data={post.chartData} />
-        {/if}
+        <Chart data={post.chartData} type={post.chartDataType} />
 			</li>
 		{/each}
 	</ul>

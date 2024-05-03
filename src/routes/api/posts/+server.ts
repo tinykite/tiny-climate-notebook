@@ -3,6 +3,7 @@ import type { Post } from '$lib/types'
 
 async function getPosts() {
 	let posts: Post[] = []
+	let chartData = []
 
 	const paths = import.meta.glob('/src/posts/*.md', { eager: true })
 
@@ -12,7 +13,6 @@ async function getPosts() {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
-			let chartData
 		
 			if (metadata?.chartDataType === 'json') {			
 				const parsedChartData = await import(`../../../data/data-${metadata.chartData}.json`);

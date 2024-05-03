@@ -7,8 +7,8 @@ export type Post = {
 	date: string
 	categories: Categories[]
 	published: boolean
-	chartData?: []
-	chartDataType: string
+	chartData: []
+	chartDataType: ChartType
 }
 
 export const chartTypes = {
