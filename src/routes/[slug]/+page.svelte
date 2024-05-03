@@ -25,7 +25,7 @@
 		{/each}
 	</div>
     
-	<Chart data={data.chartData} type={data.meta.chartDataType} />
+	<Chart data={data.chartData} type={data.meta.chartType} />
 
   <!-- Post -->
 	<div class="prose">

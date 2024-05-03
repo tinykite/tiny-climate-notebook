@@ -18,7 +18,7 @@
 				<a href={post.slug} class="title">{post.title}</a>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
-        <Chart data={post.chartData} type={post.chartDataType} />
+        <Chart data={post.chartData} type={post.chartType} />
 			</li>
 		{/each}
 	</ul>
